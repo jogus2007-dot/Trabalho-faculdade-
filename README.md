@@ -1,6 +1,9 @@
+
+PROJETO DE MODELAGEM DE BANCO DE DADOS
 Corretora de Seguros — Bradesco
-Metadados
-Integrante	RGM
+
+Integrantes
+Nome	RGM
 Mateus Martins Gonçalves	47812222
 Raul Borges Sim	48247634
 João Gustavo Bento de Souza	42283671
@@ -9,7 +12,7 @@ João Gustavo Bento de Souza	42283671
 
 A organização escolhida para o desenvolvimento deste projeto é uma corretora de seguros que atua junto ao Bradesco, identificada durante a visita como Bradesco.
 
-A organização atua no segmento de seguros, oferecendo diferentes modalidades de produtos para seus clientes. Entre os tipos de seguros trabalhados estão:
+A corretora atua no segmento de seguros, trabalhando com diferentes modalidades de produtos, como:
 
 Seguro Auto
 Seguro Residencial
@@ -19,65 +22,60 @@ Seguro Saúde
 Seguro Dental
 Outros tipos de seguros disponibilizados pelas companhias parceiras
 
-A corretora possui fins lucrativos e está em funcionamento desde 2016.
+A organização possui fins lucrativos e está em funcionamento desde 2016.
 
 1.2 Contexto e porte
 
-Atualmente, a organização conta com aproximadamente 6 funcionários. De acordo com as informações obtidas durante a pesquisa de campo, a corretora atende aproximadamente 50 a 100 clientes por mês e comercializa cerca de 50 a 60 seguros mensalmente, considerando todos os produtos oferecidos.
+Atualmente, a organização conta com aproximadamente 6 funcionários.
 
-O faturamento médio mensal informado é de aproximadamente R$ 60.000,00.
+De acordo com as informações obtidas durante a pesquisa de campo:
 
-A operação envolve diversas atividades, incluindo cadastro de clientes, atendimento, elaboração de cotações, acompanhamento de propostas, contratação de seguros, controle de apólices, acompanhamento de parcelas e pagamentos, atendimento de sinistros e renovação de apólices.
+Funcionários: aproximadamente 6
+Clientes atendidos por mês: aproximadamente 50 a 100
+Seguros comercializados por mês: aproximadamente 50 a 60
+Faturamento médio mensal: aproximadamente R$ 60.000,00
 
-1.3 Problemas e necessidades identificados
+Entre as principais atividades realizadas estão:
 
-Durante a pesquisa de campo, foi observado que grande parte das informações operacionais é controlada por meio de Excel e Google Planilhas. As cotações e propostas são acompanhadas por planilhas, assim como os pagamentos e parcelas dos seguros. O acompanhamento dos atendimentos também utiliza planilhas.
+Cadastro de clientes
+Atendimento
+Elaboração de cotações
+Acompanhamento de propostas
+Contratação de seguros
+Controle de apólices
+Controle de parcelas e pagamentos
+Atendimento de sinistros
+Renovação de apólices
+2. Problemas e Necessidades Identificados
 
-Em determinadas situações, durante uma visita ao cliente, as informações são inicialmente anotadas em folhas de papel e posteriormente utilizadas para atualizar os controles. A organização também utiliza um quadro de vidro para organizar as visitas que serão realizadas durante a semana.
+Durante a pesquisa de campo, foi observado que grande parte das informações operacionais é controlada por meio de Excel e Google Planilhas.
 
-Outro processo específico é o acompanhamento de sinistros, que é realizado por uma funcionária especializada nessa atividade, responsável pelas listagens e pelo acompanhamento dos casos.
+As cotações, propostas, pagamentos, parcelas e atendimentos são acompanhados por planilhas.
 
-As renovações são acompanhadas por Excel e Google Planilhas. A corretora também recebe um link da sucursal, no qual são registrados os seguros fechados, auxiliando na identificação das apólices próximas ao vencimento.
+Em determinadas situações, durante visitas aos clientes, as informações são inicialmente registradas em folhas de papel e posteriormente transferidas para os controles digitais.
 
-Principais problemas identificados:
+A organização também utiliza um quadro de vidro para organizar as visitas previstas para a semana.
 
-Informações distribuídas entre Excel e Google Planilhas
+O acompanhamento dos sinistros é realizado por uma funcionária especializada, responsável pelas listagens e pelo acompanhamento dos casos.
+
+As renovações são acompanhadas por Excel e Google Planilhas, além de informações disponibilizadas pela sucursal para identificar apólices próximas do vencimento.
+
+Principais problemas
+Informações distribuídas entre diferentes planilhas
 Dependência de controles manuais
-Utilização de papel durante determinados atendimentos e visitas
-Necessidade de atualizar informações manualmente após as visitas
-Controle visual de visitas por meio de quadro de vidro
-Dificuldade de centralizar o histórico dos clientes
+Utilização de papel durante determinados atendimentos
+Necessidade de atualização manual das informações
+Controle visual das visitas
+Dificuldade de centralização do histórico dos clientes
 Controle manual de parcelas e pagamentos
-Necessidade de acompanhar constantemente os vencimentos das apólices
-Controle das renovações realizado por diferentes ferramentas
-Informações de sinistros concentradas em um controle específico
+Necessidade de acompanhamento dos vencimentos
+Controle das renovações por diferentes ferramentas
+Informações de sinistros concentradas em controles específicos
+Solução proposta
 
-Diante desse cenário, o projeto propõe a modelagem de um banco de dados capaz de centralizar e organizar as principais informações da corretora.
+Diante desse cenário, o projeto propõe a criação de um banco de dados capaz de centralizar e organizar as principais informações da corretora.
 
-1.4 Justificativa da escolha
-
-A corretora foi escolhida por ser uma organização real na qual o grupo teve acesso para realizar pesquisa de campo e levantar informações diretamente relacionadas aos processos de negócio.
-
-A organização apresenta características adequadas para um projeto de banco de dados, pois trabalha diariamente com grande quantidade de informações relacionadas a clientes, seguros, seguradoras, cotações, propostas, apólices, pagamentos, atendimentos, sinistros e renovações.
-
-Além disso, a utilização de Excel, Google Planilhas e registros manuais demonstra uma oportunidade de melhoria por meio da centralização das informações em um banco de dados.
-
-A escolha também possibilita desenvolver um modelo que poderá futuramente ser utilizado como base para um sistema informatizado de gerenciamento da corretora.
-
-1.5 Evidências da organização e da pesquisa de campo
-
-A pesquisa de campo foi realizada presencialmente nas instalações da organização. As imagens abaixo foram registradas durante a visita e serão utilizadas como evidências da organização e do acesso do grupo ao ambiente pesquisado.
-
-Foto 1 — Ambiente interno da organização A primeira fotografia apresenta uma área interna da organização, com salas individuais separadas por divisórias de vidro e estrutura destinada à realização das atividades profissionais.
-
-[Inserir Foto 1 aqui]
-
-Foto 2 — Identificação visual da organização A segunda fotografia apresenta a identificação visual "Bradesco Empresas e Negócios" presente nas instalações visitadas.
-
-[Inserir Foto 2 aqui]
-
-Dados da organização
-
+3. Dados da Organização
 Informação	Dado
 Nome informado	Bradesco
 Segmento	Corretora de seguros
@@ -87,238 +85,268 @@ Endereço	Rua Rego Barros, 570
 E-mail informado	alicelimna@gmail.com
 Responsável entrevistada	Patrícia dos Santos Souza
 Cargo	Sócia
-Google Maps/Site/Rede social	Não informado
+Google Maps / Site / Rede Social	Não informado
+4. Processos de Negócio
+4.1 Cadastro de Clientes
 
-Observação: o endereço, e-mail e identificação da organização acima foram utilizados conforme as informações fornecidas pelo grupo. O link do Google Maps/site/rede social deverá ser acrescentado caso o grupo possua esse material.
+O cadastro é realizado quando um cliente entra em contato com a corretora.
 
-2. Processos de Negócio
-
-Com base na entrevista e na observação realizada durante a visita, foram identificados os seguintes processos.
-
-2.1 Cadastro de clientes
-
-O cadastro é realizado quando um cliente entra em contato com a corretora. As principais informações levantadas são:
-
+Informações principais
 CPF
 Nome
 Data de nascimento
 
 Essas informações são utilizadas para identificar o cliente e relacioná-lo aos demais processos da corretora.
 
-2.2 Cotação
+4.2 Cotação
 
-Após o levantamento das necessidades do cliente, a corretora realiza uma ou mais cotações. A organização trabalha com diversos tipos de seguros e consulta diferentes seguradoras. A Bradesco Seguros é priorizada nas cotações. Quando não é encontrada uma condição adequada, a corretora realiza cotações com outras companhias.
+Após o levantamento das necessidades do cliente, a corretora realiza uma ou mais cotações.
 
-Atualmente, o acompanhamento dessas cotações é realizado por meio de Excel e Google Planilhas.
+A organização trabalha com diferentes tipos de seguros e consulta diversas seguradoras.
 
-Fluxo: Cliente → Levantamento das necessidades → Cotação → Análise das opções → Escolha da opção
+A Bradesco Seguros é priorizada nas cotações. Quando não é encontrada uma condição adequada, outras companhias são consultadas.
 
-2.3 Proposta
+Fluxo
 
-Após a realização da cotação, caso o cliente tenha interesse em prosseguir, é elaborada uma proposta. A proposta representa a etapa entre a cotação e a efetiva contratação do seguro.
+Cliente → Levantamento das necessidades → Cotação → Análise das opções → Escolha da opção
 
-Fluxo: Cotação → Cliente analisa → Aceita prosseguir → Proposta
+4.3 Proposta
 
-Caso o cliente não prossiga, a cotação permanece registrada sem necessariamente resultar em uma apólice.
+Após a realização da cotação, caso o cliente tenha interesse em prosseguir, é elaborada uma proposta.
 
-2.4 Contratação e apólice
+A proposta representa a etapa entre a cotação e a contratação efetiva do seguro.
 
-Quando a contratação é efetivada, é gerada uma apólice. As principais informações de apólice identificadas na pesquisa são:
+Fluxo
 
+Cotação → Análise do cliente → Aceite → Proposta
+
+Caso o cliente não prossiga, a cotação permanece registrada e não necessariamente resulta em uma apólice.
+
+4.4 Contratação e Apólice
+
+Quando a contratação é efetivada, é gerada uma apólice.
+
+Principais informações
 Número da apólice
-Vigência
+Data de início da vigência
+Data de término da vigência
+Status
+Fluxo
 
-A vigência representa o período durante o qual o seguro permanece válido.
+Proposta → Contratação → Apólice → Controle da vigência
 
-Fluxo: Proposta → Contratação → Apólice → Controle da vigência
+4.5 Controle de Parcelas e Pagamentos
 
-2.5 Controle de parcelas e pagamentos
+A corretora acompanha os pagamentos e parcelas por meio de Excel e Google Planilhas.
 
-A corretora acompanha os pagamentos e parcelas por meio de Excel e Google Planilhas. O sistema proposto deverá permitir relacionar cada parcela à sua respectiva apólice e registrar a situação do pagamento.
+O banco de dados deverá permitir relacionar cada parcela à sua respectiva apólice e registrar a situação do pagamento.
 
-Fluxo: Apólice → Parcelas → Vencimento → Pagamento → Atualização do status
+Fluxo
 
-2.6 Atendimento ao cliente
+Apólice → Parcelas → Vencimento → Pagamento → Atualização do status
 
-Os atendimentos são registrados nas planilhas de acompanhamento. Durante visitas, os dados podem ser inicialmente registrados em papel e posteriormente transferidos para os controles digitais. Além disso, um quadro de vidro é utilizado para organizar as visitas previstas para a semana.
+4.6 Atendimento ao Cliente
 
-Fluxo: Cliente → Atendimento/Visita → Levantamento de informações → Registro → Atualização do acompanhamento
+Os atendimentos são registrados nas planilhas de acompanhamento.
 
-2.7 Sinistros
+Durante as visitas, os dados podem ser inicialmente registrados em papel e posteriormente transferidos para os controles digitais.
 
-O processo de sinistros possui tratamento específico dentro da organização. Uma funcionária é responsável pelo acompanhamento dos sinistros e pelas listagens relacionadas a eles. O modelo proposto deverá permitir relacionar cada sinistro ao cliente e à apólice correspondente.
+Fluxo
 
-Fluxo: Cliente → Comunicação do sinistro → Registro → Acompanhamento → Atualização da situação
+Cliente → Atendimento/Visita → Levantamento de informações → Registro → Atualização
 
-2.8 Renovação
+4.7 Sinistros
 
-As renovações são acompanhadas por Excel e Google Planilhas. A corretora também utiliza informações disponibilizadas pela sucursal para identificar seguros que estão próximos do vencimento. Quando uma apólice se aproxima do vencimento, a corretora entra em contato com o cliente para tratar da renovação.
+O processo de sinistros possui tratamento específico dentro da organização.
 
-Fluxo: Apólice → Verificação do vencimento → Contato com cliente → Renovação ou encerramento
+Uma funcionária é responsável pelo acompanhamento dos sinistros e pelas listagens relacionadas a eles.
 
-3. Requisitos do Sistema
-3.1 Requisitos Funcionais
-Código	Requisito funcional
-RF01	O sistema deve permitir cadastrar clientes.
-RF02	O sistema deve permitir consultar clientes.
-RF03	O sistema deve permitir atualizar dados dos clientes.
-RF04	O sistema deve permitir cadastrar tipos de seguros.
-RF05	O sistema deve permitir cadastrar seguradoras.
-RF06	O sistema deve permitir registrar cotações.
-RF07	O sistema deve permitir relacionar uma cotação a um cliente.
-RF08	O sistema deve permitir relacionar uma cotação a uma seguradora.
-RF09	O sistema deve permitir registrar propostas.
-RF10	O sistema deve permitir acompanhar o status das propostas.
-RF11	O sistema deve permitir registrar apólices.
-RF12	O sistema deve permitir registrar número e vigência da apólice.
-RF13	O sistema deve permitir cadastrar parcelas.
-RF14	O sistema deve permitir registrar pagamentos.
-RF15	O sistema deve permitir consultar parcelas pendentes e pagas.
-RF16	O sistema deve permitir registrar atendimentos.
-RF17	O sistema deve permitir registrar sinistros.
-RF18	O sistema deve permitir acompanhar o status dos sinistros.
-RF19	O sistema deve identificar apólices próximas do vencimento.
-RF20	O sistema deve permitir registrar renovações.
-RF21	O sistema deve manter o histórico do cliente.
-RF22	O sistema deve permitir pesquisar informações por cliente, apólice, seguradora ou situação.
-3.2 Requisitos Não Funcionais
-Código	Requisito não funcional
-RNF01	O sistema deve possuir interface simples e intuitiva.
-RNF02	O acesso às informações deve ser protegido por autenticação.
-RNF03	O sistema deve restringir o acesso aos dados conforme o perfil do usuário.
-RNF04	O sistema deve apresentar bom desempenho nas consultas.
-RNF05	O banco deve preservar a integridade dos dados.
-RNF06	O sistema deve permitir realização de backups periódicos.
-RNF07	O sistema deve evitar duplicidade de clientes.
-RNF08	O sistema deve permitir a inclusão de novos tipos de seguros.
-RNF09	O sistema deve permitir a inclusão de novas seguradoras.
-RNF10	O sistema deve preservar a confidencialidade dos dados pessoais armazenados.
+O banco de dados deverá permitir relacionar cada sinistro ao cliente e à respectiva apólice.
 
-⚠️ Nota: a correspondência exata entre alguns códigos (RF/RNF) e seus respectivos textos foi reconstruída a partir da extração do documento original, que veio com as tabelas desalinhadas. Recomenda-se conferir a ordem/numeração antes da entrega final.
+Fluxo
 
-4. Regras de Negócio
+Cliente → Comunicação do sinistro → Registro → Acompanhamento → Atualização da situação
+
+4.8 Renovação
+
+As renovações são acompanhadas por Excel e Google Planilhas.
+
+A corretora também utiliza informações disponibilizadas pela sucursal para identificar seguros próximos do vencimento.
+
+Quando uma apólice se aproxima do vencimento, a corretora entra em contato com o cliente para tratar da renovação.
+
+Fluxo
+
+Apólice → Verificação do vencimento → Contato com cliente → Renovação ou encerramento
+
+5. Requisitos do Sistema
+5.1 Requisitos Funcionais
+Código	Requisito
+RF01	Permitir cadastrar clientes
+RF02	Permitir consultar clientes
+RF03	Permitir atualizar dados dos clientes
+RF04	Permitir cadastrar tipos de seguros
+RF05	Permitir cadastrar seguradoras
+RF06	Permitir registrar cotações
+RF07	Relacionar uma cotação a um cliente
+RF08	Relacionar uma cotação a uma seguradora
+RF09	Permitir registrar propostas
+RF10	Permitir acompanhar o status das propostas
+RF11	Permitir registrar apólices
+RF12	Registrar número e vigência da apólice
+RF13	Permitir cadastrar parcelas
+RF14	Permitir registrar pagamentos
+RF15	Consultar parcelas pendentes e pagas
+RF16	Permitir registrar atendimentos
+RF17	Permitir registrar sinistros
+RF18	Permitir acompanhar o status dos sinistros
+RF19	Identificar apólices próximas do vencimento
+RF20	Permitir registrar renovações
+RF21	Manter o histórico do cliente
+RF22	Pesquisar informações por cliente, apólice, seguradora ou situação
+5.2 Requisitos Não Funcionais
+Código	Requisito
+RNF01	Possuir interface simples e intuitiva
+RNF02	Proteger o acesso às informações por autenticação
+RNF03	Restringir o acesso conforme o perfil do usuário
+RNF04	Apresentar bom desempenho nas consultas
+RNF05	Preservar a integridade dos dados
+RNF06	Permitir realização de backups periódicos
+RNF07	Evitar duplicidade de clientes
+RNF08	Permitir inclusão de novos tipos de seguros
+RNF09	Permitir inclusão de novas seguradoras
+RNF10	Preservar a confidencialidade dos dados pessoais
+6. Regras de Negócio
 Código	Regra
-RN01	Cada cliente deve possuir CPF, nome e data de nascimento cadastrados.
-RN02	O CPF deve identificar unicamente um cliente.
-RN03	A corretora trabalha com diferentes tipos de seguros.
-RN04	Uma cotação deve estar associada a um cliente.
-RN05	Uma cotação deve estar associada a uma seguradora.
-RN06	A Bradesco Seguros é priorizada nas cotações, conforme informação fornecida pela organização.
-RN07	Outras seguradoras podem ser consultadas quando necessário.
-RN08	Uma proposta pode ser originada a partir de uma cotação.
-RN09	Nem toda cotação necessariamente resulta em uma proposta.
-RN10	Uma apólice deve possuir número e período de vigência.
-RN11	A data inicial da vigência deve ser anterior à data final.
-RN12	Uma apólice pode possuir várias parcelas.
-RN13	Uma parcela deve estar vinculada a uma apólice.
-RN14	Um pagamento deve estar relacionado a uma parcela.
-RN15	Um sinistro deve estar relacionado a uma apólice.
-RN16	Os sinistros possuem acompanhamento específico dentro da organização.
-RN17	Os atendimentos devem estar relacionados aos clientes.
-RN18	As apólices devem ser acompanhadas quanto ao vencimento.
-RN19	Uma apólice pode entrar em processo de renovação.
-RN20	As informações dos clientes devem ser protegidas contra acesso não autorizado.
+RN01	Cada cliente deve possuir CPF, nome e data de nascimento
+RN02	O CPF deve identificar unicamente um cliente
+RN03	A corretora trabalha com diferentes tipos de seguros
+RN04	Uma cotação deve estar associada a um cliente
+RN05	Uma cotação deve estar associada a uma seguradora
+RN06	A Bradesco Seguros é priorizada nas cotações
+RN07	Outras seguradoras podem ser consultadas quando necessário
+RN08	Uma proposta pode ser originada a partir de uma cotação
+RN09	Nem toda cotação necessariamente resulta em uma proposta
+RN10	Uma apólice deve possuir número e período de vigência
+RN11	A data inicial da vigência deve ser anterior à data final
+RN12	Uma apólice pode possuir várias parcelas
+RN13	Uma parcela deve estar vinculada a uma apólice
+RN14	Um pagamento deve estar relacionado a uma parcela
+RN15	Um sinistro deve estar relacionado a uma apólice
+RN16	Os sinistros possuem acompanhamento específico
+RN17	Os atendimentos devem estar relacionados aos clientes
+RN18	As apólices devem ser acompanhadas quanto ao vencimento
+RN19	Uma apólice pode entrar em processo de renovação
+RN20	As informações dos clientes devem ser protegidas contra acesso não autorizado
+7. Entidades do Banco de Dados
 
-⚠️ Mesma observação da seção anterior: conferir numeração RN01–RN20 contra o conteúdo original antes da entrega.
+Foram identificadas as seguintes entidades:
 
-5. Dicionário de Dados Conceitual
 Cliente
-Atributo	Descrição	Regra de negócio
-id_cliente	Identificador interno do cliente	Único e obrigatório
+Seguradora
+TipoSeguro
+Cotação
+Proposta
+Apólice
+Parcela
+Pagamento
+Atendimento
+Sinistro
+Renovação
+8. Dicionário de Dados
+8.1 Cliente
+Atributo	Descrição	Regra
+id_cliente	Identificador interno	Único e obrigatório
 cpf	CPF do cliente	Obrigatório e único
 nome	Nome do cliente	Obrigatório
 data_nascimento	Data de nascimento	Obrigatória
-Seguradora
-Atributo	Descrição	Regra de negócio
+8.2 Seguradora
+Atributo	Descrição	Regra
 id_seguradora	Identificador da seguradora	Único
 nome	Nome da seguradora	Obrigatório
 prioridade	Indica prioridade comercial	Pode indicar seguradora priorizada
-TipoSeguro
-Atributo	Descrição	Regra de negócio
+8.3 TipoSeguro
+Atributo	Descrição	Regra
 id_tipo_seguro	Identificador do tipo	Único
 nome	Nome do seguro	Obrigatório
 descricao	Descrição do produto	Opcional
-Cotação
-Atributo	Descrição	Regra de negócio
+8.4 Cotação
+Atributo	Descrição	Regra
 id_cotacao	Identificador da cotação	Único
 data_cotacao	Data da cotação	Obrigatória
-valor_cotado	Valor apresentado	Valor não negativo
-status	Situação da cotação	Deve possuir valores definidos
+valor_cotado	Valor apresentado	Não negativo
+status	Situação da cotação	Valores definidos
 id_cliente	Cliente relacionado	Obrigatório
 id_seguradora	Seguradora consultada	Obrigatório
 id_tipo_seguro	Tipo de seguro	Obrigatório
-Proposta
-Atributo	Descrição	Regra de negócio
+8.5 Proposta
+Atributo	Descrição	Regra
 id_proposta	Identificador da proposta	Único
 data_proposta	Data da proposta	Obrigatória
-status	Situação da proposta	Deve possuir valores definidos
+status	Situação da proposta	Valores definidos
 valor_proposta	Valor da proposta	Não negativo
 id_cotacao	Cotação de origem	Deve existir
-Apólice
-Atributo	Descrição	Regra de negócio
+8.6 Apólice
+Atributo	Descrição	Regra
 id_apolice	Identificador interno	Único
 numero_apolice	Número da apólice	Obrigatório
 inicio_vigencia	Início da vigência	Obrigatório
 fim_vigencia	Fim da vigência	Obrigatório
-status	Situação da apólice	Deve possuir valores definidos
+status	Situação da apólice	Valores definidos
 id_proposta	Proposta de origem	Deve existir
-Parcela
-Atributo	Descrição	Regra de negócio
+8.7 Parcela
+Atributo	Descrição	Regra
 id_parcela	Identificador da parcela	Único
 numero_parcela	Número da parcela	Obrigatório
 valor	Valor da parcela	Maior que zero
 data_vencimento	Data de vencimento	Obrigatória
 status	Situação da parcela	Obrigatório
 id_apolice	Apólice relacionada	Obrigatório
-Pagamento
-Atributo	Descrição	Regra de negócio
+8.8 Pagamento
+Atributo	Descrição	Regra
 id_pagamento	Identificador do pagamento	Único
 data_pagamento	Data do pagamento	Obrigatória quando pago
 valor_pago	Valor pago	Maior que zero
-forma_pagamento	Forma utilizada	Deve possuir valores definidos
+forma_pagamento	Forma utilizada	Valores definidos
 id_parcela	Parcela relacionada	Obrigatório
-Atendimento
-Atributo	Descrição	Regra de negócio
+8.9 Atendimento
+Atributo	Descrição	Regra
 id_atendimento	Identificador	Único
 data_atendimento	Data do atendimento	Obrigatória
 tipo_atendimento	Tipo do atendimento	Obrigatório
 descricao	Informações do atendimento	Opcional
 id_cliente	Cliente atendido	Obrigatório
-Sinistro
-Atributo	Descrição	Regra de negócio
+8.10 Sinistro
+Atributo	Descrição	Regra
 id_sinistro	Identificador	Único
 numero_sinistro	Número do sinistro	Quando fornecido, deve ser registrado
 data_sinistro	Data da ocorrência	Obrigatória
 descricao	Descrição da ocorrência	Obrigatória
-status	Situação do sinistro	Deve possuir valores definidos
+status	Situação do sinistro	Valores definidos
 id_apolice	Apólice relacionada	Obrigatório
-Renovação
-Atributo	Descrição	Regra de negócio
+8.11 Renovação
+Atributo	Descrição	Regra
 id_renovacao	Identificador	Único
 data_contato	Data do contato com cliente	Registrada quando houver contato
 data_renovacao	Data da renovação	Obrigatória quando concluída
-status	Situação da renovação	Deve possuir valores definidos
+status	Situação da renovação	Valores definidos
 id_apolice	Apólice renovada	Obrigatório
-6. Modelagem Conceitual
-6.1 Entidades
+9. Modelagem Conceitual
+9.1 Relacionamentos
 
-Foram identificadas as seguintes entidades:
+A estrutura proposta possui os seguintes relacionamentos:
 
-Cliente — representa os clientes da corretora.
-Seguradora — representa as companhias utilizadas nas cotações.
-TipoSeguro — representa as modalidades de seguros comercializadas.
-Cotação — representa uma cotação realizada para determinado cliente.
-Proposta — representa uma cotação que avançou para uma etapa de contratação.
-Apólice — representa o seguro contratado.
-Parcela — representa os valores que devem ser pagos relacionados à apólice.
-Pagamento — representa o pagamento de uma parcela.
-Atendimento — representa o contato ou atendimento realizado pela corretora ao cliente.
-Sinistro — representa uma ocorrência relacionada a uma apólice.
-Renovação — representa o processo de renovação de uma apólice.
-7. Diagrama Entidade-Relacionamento
-
-Para o DER, recomendamos utilizar exatamente estas entidades:
-
+Cliente → Cotação: 1
+Seguradora → Cotação: 1
+TipoSeguro → Cotação: 1
+Cotação → Proposta: 1:0..1
+Proposta → Apólice: 1:0..1
+Apólice → Parcela: 1
+Parcela → Pagamento: 1:0..1
+Cliente → Atendimento: 1
+Apólice → Sinistro: 1
+Apólice → Renovação: 1
+10. Diagrama Entidade-Relacionamento
 CLIENTE
    │
    │ 1:N
@@ -339,90 +367,99 @@ PROPOSTA
    ▼
 APÓLICE
    │
-   ├────────────── 1:N ──────────────► PARCELA
-   │                                      │
-   │                                      │ 1:0..1
-   │                                      ▼
-   │                                  PAGAMENTO
+   ├──────────── 1:N ────────────► PARCELA
+   │                                  │
+   │                                  │ 1:0..1
+   │                                  ▼
+   │                              PAGAMENTO
    │
-   ├────────────── 1:N ──────────────► SINISTRO
+   ├──────────── 1:N ────────────► SINISTRO
    │
-   └────────────── 1:N ──────────────► RENOVAÇÃO
+   └──────────── 1:N ────────────► RENOVAÇÃO
 
 CLIENTE
    │
    │ 1:N
    ▼
 ATENDIMENTO
-Cardinalidades propostas
-Relacionamento	Cardinalidade
-Cliente — Cotação	1:N
-Seguradora — Cotação	1:N
-TipoSeguro — Cotação	1:N
-Cotação — Proposta	1:0..1
-Proposta — Apólice	1:0..1
-Apólice — Parcela	1:N
-Parcela — Pagamento	1:0..1
-Cliente — Atendimento	1:N
-Apólice — Sinistro	1:N
-Apólice — Renovação	1:N
-Observação importante sobre as cardinalidades
 
-As cardinalidades acima são uma proposta de modelagem baseada nas informações fornecidas pela organização. Antes da entrega definitiva, o grupo deve confirmar com a responsável entrevistada, Patrícia dos Santos Souza, se essas relações representam corretamente o funcionamento real da corretora.
+Observação: As cardinalidades apresentadas são uma proposta de modelagem baseada nas informações levantadas durante a pesquisa de campo e devem ser confirmadas com a responsável entrevistada antes da entrega definitiva.
 
-Essa validação é especialmente importante para:
+11. Justificativa Técnica
 
-quantidade de propostas originadas de uma cotação;
-quantidade de apólices vinculadas a uma proposta;
-quantidade de pagamentos por parcela;
-possibilidade de uma apólice possuir mais de um sinistro;
-quantidade de renovações que podem ser registradas para uma mesma apólice.
-8. Justificativa Técnica
+A modelagem foi elaborada considerando os processos identificados durante a pesquisa de campo.
 
-A modelagem foi elaborada considerando os processos efetivamente identificados durante a pesquisa de campo.
+A entidade Cliente foi definida como uma das entidades centrais, pois as atividades de atendimento e contratação estão relacionadas aos clientes da corretora.
 
-A entidade Cliente foi definida como uma das entidades centrais porque todas as atividades de atendimento e contratação estão relacionadas aos clientes da corretora.
+As entidades Cotação, Proposta e Apólice foram separadas para representar diferentes etapas do processo comercial.
 
-Cotação, Proposta e Apólice foram separadas para representar diferentes etapas do processo comercial. Essa separação evita considerar que toda cotação necessariamente resulta em contratação.
+A entidade Seguradora foi separada de TipoSeguro, pois representam informações diferentes: a seguradora corresponde à companhia responsável pelo produto, enquanto o tipo de seguro representa a modalidade comercializada.
 
-A entidade Seguradora foi separada de TipoSeguro porque uma seguradora representa a companhia responsável pelo produto, enquanto o tipo de seguro representa a modalidade contratada.
+A entidade Parcela foi separada de Apólice, pois uma apólice pode possuir diversas parcelas.
 
-A entidade Parcela foi separada de Apólice porque uma única apólice pode possuir diversas parcelas. Da mesma maneira, Pagamento foi separado para permitir registrar a situação financeira de cada parcela.
+A entidade Pagamento permite registrar a situação financeira de cada parcela.
 
-A entidade Atendimento representa o histórico de contatos realizados com o cliente, substituindo conceitualmente o controle atualmente realizado por planilhas e registros manuais.
+A entidade Atendimento representa o histórico de contatos realizados com os clientes.
 
-A entidade Sinistro foi incluída porque o processo de acompanhamento de sinistros é uma atividade existente na organização e possui uma funcionária especializada.
+A entidade Sinistro foi incluída devido à existência desse processo dentro da organização.
 
-A entidade Renovação foi incluída devido à importância do acompanhamento dos vencimentos das apólices. Sua existência permite registrar o processo de renovação sem apagar o histórico anterior.
+A entidade Renovação foi incluída devido à necessidade de acompanhar os vencimentos das apólices e manter o histórico das renovações.
 
-A estrutura também foi pensada para permitir crescimento futuro. Novas seguradoras e modalidades de seguros podem ser adicionadas sem modificar as entidades principais.
+12. Evidências da Pesquisa de Campo
 
-9. Uso de Inteligência Artificial
+A pesquisa de campo foi realizada presencialmente nas instalações da organização.
+
+Foto 1 — Ambiente interno
+
+Registro do ambiente interno da organização, com salas individuais e estrutura destinada à realização das atividades profissionais.
+
+[Inserir Foto 1 aqui]
+
+Foto 2 — Identificação da organização
+
+Registro da identificação visual “Bradesco Empresas e Negócios” presente nas instalações visitadas.
+
+[Inserir Foto 2 aqui]
+
+13. Uso de Inteligência Artificial
 Ferramenta utilizada
 
 ChatGPT — OpenAI
 
-Etapas em que foi utilizado
+Utilização
 
-A ferramenta foi utilizada para:
+A ferramenta foi utilizada como apoio nas seguintes etapas:
 
-organização das informações da entrevista;
-estruturação do README;
-identificação preliminar de entidades;
-elaboração dos requisitos;
-organização das regras de negócio;
-elaboração do dicionário de dados;
-revisão da redação;
-organização da proposta de modelagem.
+Organização das informações da entrevista
+Estruturação do README
+Identificação preliminar das entidades
+Elaboração dos requisitos
+Organização das regras de negócio
+Elaboração do dicionário de dados
+Revisão da redação
+Organização da proposta de modelagem
 Motivação
 
 A IA foi utilizada como ferramenta de apoio para transformar as informações coletadas durante a pesquisa de campo em uma estrutura organizada de documentação e modelagem de banco de dados.
 
-Prompt utilizado
+As informações específicas sobre a corretora foram obtidas por meio da pesquisa de campo e entrevista realizada pelo grupo.
 
-O grupo forneceu à ferramenta informações coletadas diretamente da corretora, incluindo:
+As sugestões da IA foram comparadas com as informações fornecidas pela organização para evitar a inclusão de processos inexistentes.
 
-"CORRETORA DE SEGURO - QUE ATUA NO BRADESCO. Quais informações vocês cadastram de um cliente? CPF, Nome, Data de nascimento..."
+14. Conclusão
 
-Também foram fornecidas informações sobre os tipos de seguros, apólices, seguradoras, cotações, pagamentos, atendimentos, sinistros, renovações, quantidade de funcionários, clientes e faturamento. Posteriormente, foi solicitado que essas informações fossem organizadas de acordo com os requisitos da atividade acadêmica.
+O projeto tem como objetivo propor uma estrutura de banco de dados capaz de centralizar, organizar e facilitar o gerenciamento das informações da corretora de seguros.
 
+A modelagem contempla os principais processos identificados durante a pesquisa, incluindo:
+
+Clientes
+Seguradoras
+Tipos de seguros
+Cotações
+Propostas
+Apólices
+Parcelas
+Pagamentos
+Atendimentos
+Sinistros
+Renovações
