@@ -255,17 +255,22 @@ Sinistro
 Renovação
 8. Dicionário de Dados
 8.1 Cliente
+8. Dicionário de Dados
+
+O dicionário de dados apresenta as principais entidades utilizadas no banco de dados, seus atributos e as regras aplicadas a cada informação.
+
+8.1 Cliente
 Atributo	Descrição	Regra
-id_cliente	Identificador interno	Único e obrigatório
-cpf	CPF do cliente	Obrigatório e único
+id_cliente	Identificador do cliente	Único e obrigatório
+cpf	CPF do cliente	  Obrigatório e único
 nome	Nome do cliente	Obrigatório
 data_nascimento	Data de nascimento	Obrigatória
 8.2 Seguradora
 Atributo	Descrição	Regra
 id_seguradora	Identificador da seguradora	Único
 nome	Nome da seguradora	Obrigatório
-prioridade	Indica prioridade comercial	Pode indicar seguradora priorizada
-8.3 TipoSeguro
+prioridade	Prioridade comercial	Opcional
+8.3 Tipo de Seguro
 Atributo	Descrição	Regra
 id_tipo_seguro	Identificador do tipo	Único
 nome	Nome do seguro	Obrigatório
@@ -288,7 +293,7 @@ valor_proposta	Valor da proposta	Não negativo
 id_cotacao	Cotação de origem	Deve existir
 8.6 Apólice
 Atributo	Descrição	Regra
-id_apolice	Identificador interno	Único
+id_apolice	Identificador da apólice	Único
 numero_apolice	Número da apólice	Obrigatório
 inicio_vigencia	Início da vigência	Obrigatório
 fim_vigencia	Fim da vigência	Obrigatório
@@ -319,7 +324,7 @@ id_cliente	Cliente atendido	Obrigatório
 8.10 Sinistro
 Atributo	Descrição	Regra
 id_sinistro	Identificador	Único
-numero_sinistro	Número do sinistro	Quando fornecido, deve ser registrado
+numero_sinistro	Número do sinistro	Quando fornecido, registrar
 data_sinistro	Data da ocorrência	Obrigatória
 descricao	Descrição da ocorrência	Obrigatória
 status	Situação do sinistro	Valores definidos
@@ -327,65 +332,63 @@ id_apolice	Apólice relacionada	Obrigatório
 8.11 Renovação
 Atributo	Descrição	Regra
 id_renovacao	Identificador	Único
-data_contato	Data do contato com cliente	Registrada quando houver contato
+data_contato	Data do contato com cliente	Quando houver contato
 data_renovacao	Data da renovação	Obrigatória quando concluída
 status	Situação da renovação	Valores definidos
 id_apolice	Apólice renovada	Obrigatório
 9. Modelagem Conceitual
-9.1 Relacionamentos
+9.1 Entidades
+
+O banco de dados é composto pelas seguintes entidades:
+
+Cliente
+Seguradora
+Tipo de Seguro
+Cotação
+Proposta
+Apólice
+Parcela
+Pagamento
+Atendimento
+Sinistro
+Renovação
+9.2 Relacionamentos
+Relacionamento	Cardinalidade
+Cliente → Cotação	1
+Seguradora → Cotação	1
+Tipo de Seguro → Cotação	1
+Cotação → Proposta	1:0..1
+Proposta → Apólice	1:0..1
+Apólice → Parcela	1
+Parcela → Pagamento	1:0..1
+Cliente → Atendimento	1
+Apólice → Sinistro	1
+Apólice → Renovação	1
+9.3 Visão simplificada do relacionamento
+CLIENTE
+   │
+   ├── 1:N ──► COTAÇÃO ◄── N:1 ── SEGURADORA
+   │              │
+   │              └── N:1 ──► TIPO_SEGURO
+   │
+   │              │
+   │              └── 1:0..1 ──► PROPOSTA
+   │                                  │
+   │                                  └── 1:0..1 ──► APÓLICE
+   │                                                   │
+   │                                                   ├── 1:N ──► PARCELA
+   │                                                   │              │
+   │                                                   │              └── 1:0..1 ──► PAGAMENTO
+   │                                                   │
+   │                                                   ├── 1:N ──► SINISTRO
+   │                                                   │
+   │                                                   └── 1:N ──► RENOVAÇÃO
+   │
+   └── 1:N ──► ATENDIMENTO
 
 A estrutura proposta possui os seguintes relacionamentos:
 
-Cliente → Cotação: 1
-Seguradora → Cotação: 1
-TipoSeguro → Cotação: 1
-Cotação → Proposta: 1:0..1
-Proposta → Apólice: 1:0..1
-Apólice → Parcela: 1
-Parcela → Pagamento: 1:0..1
-Cliente → Atendimento: 1
-Apólice → Sinistro: 1
-Apólice → Renovação: 1
-10. Diagrama Entidade-Relacionamento
-CLIENTE
-   │
-   │ 1:N
-   ▼
-COTAÇÃO ───── N:1 ───── SEGURADORA
-   │
-   │ N:1
-   ▼
-TIPO_SEGURO
-
-COTAÇÃO
-   │
-   │ 1:0..1
-   ▼
-PROPOSTA
-   │
-   │ 1:0..1
-   ▼
-APÓLICE
-   │
-   ├──────────── 1:N ────────────► PARCELA
-   │                                  │
-   │                                  │ 1:0..1
-   │                                  ▼
-   │                              PAGAMENTO
-   │
-   ├──────────── 1:N ────────────► SINISTRO
-   │
-   └──────────── 1:N ────────────► RENOVAÇÃO
-
-CLIENTE
-   │
-   │ 1:N
-   ▼
-ATENDIMENTO
-
-Observação: As cardinalidades apresentadas são uma proposta de modelagem baseada nas informações levantadas durante a pesquisa de campo e devem ser confirmadas com a responsável entrevistada antes da entrega definitiva.
-
-11. Justificativa Técnica
+10. Justificativa Técnica
 
 A modelagem foi elaborada considerando os processos identificados durante a pesquisa de campo.
 
@@ -405,7 +408,7 @@ A entidade Sinistro foi incluída devido à existência desse processo dentro da
 
 A entidade Renovação foi incluída devido à necessidade de acompanhar os vencimentos das apólices e manter o histórico das renovações.
 
-12. Evidências da Pesquisa de Campo
+11. Evidências da Pesquisa de Campo
 
 A pesquisa de campo foi realizada presencialmente nas instalações da organização.
 
@@ -421,32 +424,7 @@ Registro da identificação visual “Bradesco Empresas e Negócios” presente 
 
 [Inserir Foto 2 aqui]
 
-13. Uso de Inteligência Artificial
-Ferramenta utilizada
-
-ChatGPT — OpenAI
-
-Utilização
-
-A ferramenta foi utilizada como apoio nas seguintes etapas:
-
-Organização das informações da entrevista
-Estruturação do README
-Identificação preliminar das entidades
-Elaboração dos requisitos
-Organização das regras de negócio
-Elaboração do dicionário de dados
-Revisão da redação
-Organização da proposta de modelagem
-Motivação
-
-A IA foi utilizada como ferramenta de apoio para transformar as informações coletadas durante a pesquisa de campo em uma estrutura organizada de documentação e modelagem de banco de dados.
-
-As informações específicas sobre a corretora foram obtidas por meio da pesquisa de campo e entrevista realizada pelo grupo.
-
-As sugestões da IA foram comparadas com as informações fornecidas pela organização para evitar a inclusão de processos inexistentes.
-
-14. Conclusão
+12. Conclusão
 
 O projeto tem como objetivo propor uma estrutura de banco de dados capaz de centralizar, organizar e facilitar o gerenciamento das informações da corretora de seguros.
 
